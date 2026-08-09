@@ -20424,12 +20424,16 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libsec_esek.so",
             ],
             shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
                 "libspictrl",
                 "libsec_semHalTlc",
                 "libsec_semRil",
-                "liblog",
+                "libc++",
                 "libc",
                 "libm",
+                "libdl",
             ],
         },
     },
@@ -21254,6 +21258,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libskeymint10device.so",
             ],
             shared_libs: [
+                "vendor.samsung.hardware.keymint-V3-ndk",
+                "android.hardware.security.keymint-V3-ndk",
+                "android.hardware.security.sharedsecret-V1-ndk",
+                "android.hardware.security.secureclock-V1-ndk",
+                "android.hardware.security.rkp-V3-ndk",
                 "libcrypto",
                 "liblog",
                 "libcutils",
@@ -21261,16 +21270,11 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "libhidlbase",
                 "libbinder_ndk",
-                "libskeymint_cli",
                 "libsecril-client_vendor",
-                "vendor.samsung.hardware.keymint-V3-ndk",
-                "android.hardware.security.keymint-V3-ndk",
-                "android.hardware.security.sharedsecret-V1-ndk",
-                "android.hardware.security.secureclock-V1-ndk",
-                "android.hardware.security.rkp-V3-ndk",
                 "libspukeymintdeviceutils",
                 "libcppbor_external",
                 "libjsoncpp",
+                "libskeymint_cli",
                 "libc++",
                 "libc",
                 "libm",
@@ -21295,6 +21299,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libskeymint_cli.so",
             ],
             shared_libs: [
+                "vendor.samsung.hardware.keymint-V3-ndk",
+                "android.hardware.security.keymint-V3-ndk",
+                "android.hardware.security.sharedsecret-V1-ndk",
+                "android.hardware.security.secureclock-V1-ndk",
+                "android.hardware.security.rkp-V3-ndk",
                 "liblog",
                 "libbase",
                 "libcutils",
@@ -21307,10 +21316,6 @@ cc_prebuilt_library_shared {
                 "libcrypto-v33",
                 "libbinder_ndk",
                 "libsecril-client_vendor",
-                "android.hardware.security.keymint-V3-ndk",
-                "android.hardware.security.sharedsecret-V1-ndk",
-                "android.hardware.security.secureclock-V1-ndk",
-                "android.hardware.security.rkp-V3-ndk",
                 "libjsoncpp",
                 "libsec_esek",
                 "libQSEEComAPI",
@@ -26233,6 +26238,25 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.vcc-V2-ndk",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.samsung.hardware.camera.vcc-V2-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.samsung.hardware.gnss-V2-ndk_platform",
     owner: "samsung",
     strip: {
@@ -27143,7 +27167,6 @@ cc_prebuilt_binary {
                 "libspcom",
                 "libhwvault",
                 "libshctrl",
-                "libese-grdg",
                 "vendor.samsung.hardware.security.hermes-V1-ndk",
                 "vendor.samsung.hardware.security.drk-V1-ndk",
                 "android.hardware.weaver@1.0",
@@ -27749,6 +27772,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64",
             ],
             shared_libs: [
+                "vendor.samsung.hardware.camera.vcc-V2-ndk",
                 "android.hardware.camera.device-V2-ndk",
                 "android.hardware.camera.common-V1-ndk",
                 "android.hardware.camera.provider-V2-ndk",
