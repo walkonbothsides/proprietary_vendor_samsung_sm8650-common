@@ -7,6 +7,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
+    vendor/samsung/sm8650-common/proprietary/product/etc/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/DsgpPolicy.csv:$(TARGET_COPY_OUT_VENDOR)/etc/DsgpPolicy.csv \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/aip/config/PCC_Config-timestamp:$(TARGET_COPY_OUT_VENDOR)/etc/aip/config/PCC_Config-timestamp \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/aip/config/pcc_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/aip/config/pcc_config.json \
@@ -1073,6 +1074,7 @@ PRODUCT_PACKAGES += \
     libmmosal \
     libmmparser_lite \
     TimeService \
+    EuiccGoogle \
     uimservicelibrary \
     android.hardware.gnss-aidl-service-qti.xml \
     atfwd-saidl.xml \
