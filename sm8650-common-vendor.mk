@@ -101,6 +101,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.qti.smp2p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.smp2p.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
+    vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.thermal-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.thermal-default.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.rilchip.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rilchip.qcom.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
@@ -233,6 +234,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/lib64/p3_profile.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/p3_profile.bin
 
 PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.security.widevine.keyprov-V2-ndk \
     SWPD_libTsAf \
     btaudio_offload_if \
     camera.device-external-impl \
@@ -728,6 +730,7 @@ PRODUCT_PACKAGES += \
     libnicm \
     libnicm_dsi \
     libnicm_utils \
+    liboemcrypto \
     libopencv \
     libopencv3a \
     libopestriping \
@@ -1033,11 +1036,13 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.security.drk-V1-ndk \
     vendor.samsung.hardware.security.drk@2.0 \
     vendor.samsung.hardware.security.hermes-V1-ndk \
+    vendor.samsung.hardware.security.widevine.keyprov-V1-ndk \
     vendor.samsung.hardware.thermal-V1-ndk \
     vendor_lib_rfsa_adsp_libdsp_streamer_binning_so \
     vendor_lib_rfsa_adsp_libhme_dsp_skel_so \
     libmmosal \
     libmmparser_lite \
+    com.google.android.widevine.nonupdatable \
     TimeService \
     EuiccGoogle \
     uimservicelibrary \
@@ -1056,6 +1061,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.trustedui-aidl-service.xml \
     vendor.qti.qccvndhal_aidl-service.xml \
     vendor.samsung.hardware.camera.provider-service.xml \
+    vendor.samsung.hardware.security.widevine.keyprov-service.xml \
     vendor.samsung.hardware.thermal-default.xml \
     ATFWD-daemon \
     adpl \
@@ -1082,6 +1088,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.trustedui@1.0-service-qti \
     vendor.qti.media.c2@1.0-service \
     vendor.samsung.hardware.camera.provider-service_64 \
+    vendor.samsung.hardware.security.widevine.keyprov-service \
     vendor.samsung.hardware.thermal-service \
     init.kernel.post_boot-pineapple \
     init.kernel.post_boot \
