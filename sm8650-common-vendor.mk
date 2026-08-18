@@ -625,11 +625,14 @@ PRODUCT_PACKAGES += \
     libdiag \
     libdigital-dimming \
     libdisp-aba \
+    libdisplayconfig.qti \
+    libdisplaydebug \
     libdisplayqos \
     libdisplayskuutils \
     libdpps \
     libdrmfs \
     libdrmtime \
+    libdrmutils \
     libdsd2pcm \
     libdsi_netctrl \
     libdsmanager \
@@ -677,6 +680,7 @@ PRODUCT_PACKAGES += \
     libhermes \
     libhermes_bdbridge \
     libhermes_cred \
+    libhistogram \
     libhme \
     libhwvault \
     libhypermotion_core \
@@ -803,6 +807,7 @@ PRODUCT_PACKAGES += \
     libqdcm-json-mode-parser \
     libqdcm-mode-parser \
     libqdi \
+    libqdutils \
     libqesdk2_0 \
     libqfp_sensortest \
     libqisl \
@@ -823,6 +828,7 @@ PRODUCT_PACKAGES += \
     libqrtrclient \
     libqseed3 \
     libqsegnet \
+    libqservice \
     libqsh \
     libqshcamera \
     libqsocket \
@@ -848,10 +854,14 @@ PRODUCT_PACKAGES += \
     libscveObjectSegmentation \
     libscveObjectTracker \
     libscveObjectTracker_stub \
+    libsdedrm \
     libsdm-color \
     libsdm-colormgr-algo \
     libsdm-disp-vndapis \
+    libsdmcore \
+    libsdmdal \
     libsdmextension \
+    libsdmutils \
     libsdsprpc \
     libsdynatm \
     libsec-ril-impl \
@@ -1125,6 +1135,7 @@ PRODUCT_PACKAGES += \
     secaudiohalaidl \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor.qti.hardware.display.color-service \
+    vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.qseecom@1.0-service \
     vendor.qti.hardware.secureprocessor@1.0 \
     vendor.qti.hardware.trustedui-aidl-service-qti \
