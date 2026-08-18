@@ -106,6 +106,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.qti.smp2p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.smp2p.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
+    vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.ifaa-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.ifaa-service.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.thermal-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.thermal-default.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.rilchip.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rilchip.qcom.rc \
@@ -456,6 +457,7 @@ PRODUCT_PACKAGES += \
     libHumanSegVideoModel_Vendor \
     libIDDQD_core \
     libIMUSensor \
+    libIfaaCa \
     libLightObjectDetector_v1.camera.samsung \
     libLocalTM_capture_core.camera.samsung \
     libLocalTM_preview_core \
@@ -1060,6 +1062,7 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.camera.vcc-V2-ndk \
     vendor.samsung.hardware.gnss-V2-ndk_platform \
     vendor.samsung.hardware.hyper-V2-ndk \
+    vendor.samsung.hardware.ifaa-V1-ndk \
     vendor.samsung.hardware.keymint-V3-ndk \
     vendor.samsung.hardware.media.mpp-V5-ndk \
     vendor.samsung.hardware.radio-V1-ndk \
@@ -1096,6 +1099,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.trustedui-aidl-service.xml \
     vendor.qti.qccvndhal_aidl-service.xml \
     vendor.samsung.hardware.camera.provider-service.xml \
+    vendor.samsung.hardware.ifaa-service.xml \
     vendor.samsung.hardware.radio_manifest_2_34.xml \
     vendor.samsung.hardware.security.widevine.keyprov-service.xml \
     vendor.samsung.hardware.sehradio_manifest_2_34.xml \
@@ -1127,6 +1131,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.trustedui@1.0-service-qti \
     vendor.qti.media.c2@1.0-service \
     vendor.samsung.hardware.camera.provider-service_64 \
+    vendor.samsung.hardware.ifaa-service \
     vendor.samsung.hardware.security.widevine.keyprov-service \
     vendor.samsung.hardware.thermal-service \
     init.kernel.post_boot-pineapple \
