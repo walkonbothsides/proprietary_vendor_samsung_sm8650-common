@@ -34,12 +34,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/aip/model/mfisp_model_nl_Tetra_RGB_fp16.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/aip/model/mfisp_model_nl_Tetra_RGB_fp16.dlc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/aip/model/mfisp_tmodel_ll_Tetra_RGB_fp16.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/aip/model/mfisp_tmodel_ll_Tetra_RGB_fp16.dlc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/aip/model/mfisp_tmodel_nl_Tetra_RGB_fp16.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/aip/model/mfisp_tmodel_nl_Tetra_RGB_fp16.dlc \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_effects_haptic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_haptic.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_effects_sec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_sec.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_effects_spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_spatializer.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_policy_configuration_base.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_base.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/batching.conf:$(TARGET_COPY_OUT_VENDOR)/etc/batching.conf \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/beauty/settings.dat:$(TARGET_COPY_OUT_VENDOR)/etc/beauty/settings.dat \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/btcon.json:$(TARGET_COPY_OUT_VENDOR)/etc/btcon.json \
@@ -132,7 +126,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/media_profiles_pineapple.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_pineapple.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/mem_logger_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mem_logger_config.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/mercury.json:$(TARGET_COPY_OUT_VENDOR)/etc/mercury.json \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/mercury_hv.json:$(TARGET_COPY_OUT_VENDOR)/etc/mercury_hv.json \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/models/acd/environment.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/environment.eai \
@@ -404,7 +397,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.bluetooth@1.1-impl-qti \
     android.hardware.gnss-aidl-impl-qti \
-    audio.primary.pineapple \
     camera.qcom.sm8650 \
     camera.qcom \
     camera.unihal.default \
@@ -539,21 +531,11 @@ PRODUCT_PACKAGES += \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
-    libagm \
-    libagm_compress_plugin \
-    libagm_mixer_plugin \
-    libagm_pcm_plugin \
-    libagmclient \
-    libagmmixer \
     libai_denoiser_interface \
     libaidenoiser \
     libaidenoiserv2 \
     libaifrc.quram \
     libaivideocentral.arcsoft \
-    libar-acdb \
-    libar-gpr \
-    libar-gsl \
-    libar-pal \
     libarcsoft_aieffectpk_detection \
     libarcsoft_aieffectpk_dualcam_video_bokeh \
     libarcsoft_aieffectpk_video \
@@ -565,11 +547,8 @@ PRODUCT_PACKAGES += \
     libarcsoft_deflicker_native \
     libarcsoft_dualcam_portraitlighting_preview \
     libarcsoft_object_tracking \
-    libarmemlog \
     libatccore \
-    libats \
     libaudio_log_utils \
-    libaudiochargerlistener \
     libaudiofeaturestats \
     libauto_framing_arcsoft.uniplugin@1.0 \
     libauto_framing_lite.uniplugin@1.0 \
@@ -730,8 +709,6 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblowi_common \
     liblowi_wifihal \
-    liblx-ar_util \
-    liblx-osal \
     libmaskdetection.uniplugin@1.0 \
     libmcaimegpu.samsung \
     libmctfengine_stub \
@@ -906,7 +883,6 @@ PRODUCT_PACKAGES += \
     libsnapdragoncolor-qdcm \
     libsnaplite_native \
     libsnaplite_wrapper \
-    libsndcardparser \
     libsnpe_dsp_domains_v3 \
     libsnpe_wrapper \
     libsns_api \
@@ -1006,7 +982,6 @@ PRODUCT_PACKAGES += \
     libaudiosaplus_sec \
     libmyspace \
     libquasar \
-    libsamsungSoundbooster_plus \
     libshoebox \
     libswdap \
     libswspatializer \
@@ -1027,7 +1002,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.diaghal@1.0_vendor \
     vendor.qti.gnss-V5-ndk \
     vendor.qti.gnss-service \
-    vendor.qti.hardware.AGMIPC@1.0-impl \
     vendor.qti.hardware.ListenSoundModel@1.0-impl \
     vendor.qti.hardware.ListenSoundModel@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
@@ -1038,7 +1012,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.fm@1.0 \
-    vendor.qti.hardware.pal@1.0-impl \
     vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.qccsyshal@1.1 \
     vendor.qti.hardware.qccsyshal@1.2 \
@@ -1117,7 +1090,6 @@ PRODUCT_PACKAGES += \
     ATFWD-daemon \
     adpl \
     adsprpcd \
-    audioadsprpcd \
     cdsprpcd \
     cnss-daemon \
     diag-router \

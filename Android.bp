@@ -7065,53 +7065,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.primary.pineapple",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/audio.primary.pineapple.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "liblog",
-                "libcutils",
-                "libaudioutils",
-                "libexpat",
-                "libhidlbase",
-                "libprocessgroup",
-                "libfmq",
-                "libutils",
-                "libar-pal",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libhidlmemory",
-                "vendor.qti.hardware.pal@1.0-impl",
-                "vendor.qti.hardware.pal@1.0",
-                "vendor.qti.hardware.AGMIPC@1.0-impl",
-                "vendor.qti.hardware.AGMIPC@1.0",
-                "libagm",
-                "libsecaudioinfo",
-                "libsecaudiolevel",
-                "librecordalive",
-                "libspeakercalibration",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "camera.qcom.sm8650",
     owner: "samsung",
     strip: {
@@ -10977,194 +10930,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libagm",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libagm.so",
-            ],
-            shared_libs: [
-                "libar-gsl",
-                "liblog",
-                "liblx-osal",
-                "libaudioroute",
-                "libats",
-                "libarmemlog",
-                "libcutils",
-                "libtinyalsa",
-                "libaudio_log_utils",
-                "libexpat",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libagm_compress_plugin",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libagm_compress_plugin.so",
-            ],
-            shared_libs: [
-                "libsndcardparser",
-                "libagmclient",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libtinyalsa",
-                "libtinycompress",
-                "libaudio_log_utils",
-                "libexpat",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libagm_mixer_plugin",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libagm_mixer_plugin.so",
-            ],
-            shared_libs: [
-                "libsndcardparser",
-                "libagmclient",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libtinyalsa",
-                "libaudio_log_utils",
-                "libexpat",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libagm_pcm_plugin",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libagm_pcm_plugin.so",
-            ],
-            shared_libs: [
-                "libsndcardparser",
-                "libagmclient",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libtinyalsa",
-                "libaudio_log_utils",
-                "libexpat",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libagmclient",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libagmclient.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libcutils",
-                "libhardware",
-                "libbase",
-                "vendor.qti.hardware.AGMIPC@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libagmmixer",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libagmmixer.so",
-            ],
-            shared_libs: [
-                "libtinyalsa",
-                "libexpat",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libai_denoiser_interface",
     owner: "samsung",
     strip: {
@@ -11298,128 +11063,6 @@ cc_prebuilt_library_shared {
                 "libsnap_vndk",
                 "libmpbase",
                 "liblog",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libar-acdb",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libar-acdb.so",
-            ],
-            shared_libs: [
-                "liblx-osal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libar-gpr",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libar-gpr.so",
-            ],
-            shared_libs: [
-                "liblx-osal",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libar-gsl",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libar-gsl.so",
-            ],
-            shared_libs: [
-                "liblx-osal",
-                "libar-acdb",
-                "liblx-ar_util",
-                "libar-gpr",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libar-pal",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libar-pal.so",
-            ],
-            shared_libs: [
-                "libar-gsl",
-                "liblog",
-                "libexpat",
-                "liblx-osal",
-                "libaudioroute",
-                "libcutils",
-                "libutilscallstack",
-                "libagmclient",
-                "libvui_intf",
-                "libarmemlog",
-                "libhidlbase",
-                "libPeripheralStateUtils",
-                "libtinyalsa",
-                "libtinycompress",
-                "libsecaudioinfo",
-                "libsecaudiolevel",
-                "librecordalive",
-                "libspeakercalibration",
-                "libc++",
                 "libc",
                 "libm",
                 "libdl",
@@ -11710,33 +11353,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libarmemlog",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libarmemlog.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libexpat",
-                "liblx-osal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libatccore",
     owner: "samsung",
     strip: {
@@ -11761,36 +11377,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libats",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libats.so",
-            ],
-            shared_libs: [
-                "liblx-osal",
-                "libutils",
-                "libcutils",
-                "libdiag",
-                "libar-gsl",
-                "libar-acdb",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libaudio_log_utils",
     owner: "samsung",
     strip: {
@@ -11805,32 +11391,6 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libexpat",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaudiochargerlistener",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libaudiochargerlistener.so",
-            ],
-            shared_libs: [
-                "libcutils",
                 "liblog",
                 "libc++",
                 "libc",
@@ -16576,62 +16136,6 @@ cc_prebuilt_library_shared {
                 "libloc_base_util",
                 "libloc_mq_client",
                 "liblowi_common",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liblx-ar_util",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liblx-ar_util.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "liblx-osal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liblx-osal",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liblx-osal.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libdiag",
-                "libion",
-                "libpdmapper",
-                "libpdnotifier",
-                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -21962,32 +21466,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsndcardparser",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsndcardparser.so",
-            ],
-            shared_libs: [
-                "libexpat",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libsnpe_dsp_domains_v3",
     owner: "samsung",
     strip: {
@@ -24696,36 +24174,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsamsungSoundbooster_plus",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/soundfx/libsamsungSoundbooster_plus.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "lib_SoundBooster_ver2000",
-                "libsecaudioinfo",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "soundfx",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libshoebox",
     owner: "samsung",
     strip: {
@@ -25331,40 +24779,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.AGMIPC@1.0-impl",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libcutils",
-                "libhardware",
-                "libbase",
-                "libar-gsl",
-                "vendor.qti.hardware.AGMIPC@1.0",
-                "libutilscallstack",
-                "libagm",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.ListenSoundModel@1.0-impl",
     owner: "samsung",
     strip: {
@@ -25729,43 +25143,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.pal@1.0-impl",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libhidltransport",
-                "libutils",
-                "liblog",
-                "libcutils",
-                "libfmq",
-                "libhardware",
-                "libbase",
-                "vendor.qti.hardware.pal@1.0",
-                "libar-pal",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libhidlmemory",
                 "libc++",
                 "libc",
                 "libm",
@@ -27443,35 +26820,6 @@ cc_prebuilt_binary {
     },
     prefer: true,
     soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "audioadsprpcd",
-    owner: "samsung",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/audioadsprpcd",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-    required: [
-        "vendor.qti.audio-adsprpc-service.rc",
-    ],
 }
 
 cc_prebuilt_binary {
