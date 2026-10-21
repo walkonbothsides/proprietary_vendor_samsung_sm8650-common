@@ -15,6 +15,193 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "lib_nativeJni.dk.samsung",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/lib_nativeJni.dk.samsung.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libdk_native_keymint_soter_system",
+                "libcrypto_soter",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_vnd_client.dk.samsung",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/lib_vnd_client.dk.samsung.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcrypto_soter",
+                "lib_nativeJni.dk.samsung",
+                "vendor.samsung.hardware.security.drk-V1-ndk_soter_system",
+                "libbase",
+                "libbinder_ndk",
+                "vendor.samsung.hardware.security.drk@2.0_soter_system",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcrypto_soter",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/libcrypto_soter.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdk_native_keymint_soter_system",
+    stem: "libdk_native_keymint",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/libdk_native_keymint.so",
+            ],
+            shared_libs: [
+                "vendor.samsung.hardware.keymint-V3-ndk_soter_system",
+                "libbinder_ndk",
+                "libbase",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.keymint-V3-ndk_soter_system",
+    stem: "vendor.samsung.hardware.keymint-V3-ndk",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/vendor.samsung.hardware.keymint-V3-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.security.keymint-V3-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.security.drk-V1-ndk_soter_system",
+    stem: "vendor.samsung.hardware.security.drk-V1-ndk",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/vendor.samsung.hardware.security.drk-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.security.drk@2.0_soter_system",
+    stem: "vendor.samsung.hardware.security.drk@2.0",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/vendor.samsung.hardware.security.drk@2.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.samsung.hardware.security.widevine.keyprov-V2-ndk",
     owner: "samsung",
     strip: {
@@ -7836,6 +8023,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libAidlSoterServiceImpl",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libAidlSoterServiceImpl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libTigerCaV4",
+                "libTigerLogger",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libAlacSwDec",
     owner: "samsung",
     strip: {
@@ -9975,6 +10190,61 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libTetraSR10Tuning.camera.samsung.so",
             ],
             shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libTigerCaV4",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libTigerCaV4.so",
+            ],
+            shared_libs: [
+                "libQSEEComAPI",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libTigerLogger",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libTigerLogger",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libTigerLogger.so",
+            ],
+            shared_libs: [
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -13169,6 +13439,39 @@ cc_prebuilt_library_shared {
                 "libsdmutils",
                 "libc++",
                 "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdk_vnd_service_core",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdk_vnd_service_core.so",
+            ],
+            shared_libs: [
+                "libcrypto-v33",
+                "libsecril-client_vendor",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libc",
+                "libcutils",
+                "libQSEEComAPI",
+                "libhermes_cred",
+                "libvkmanager_vendor",
+                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -20881,6 +21184,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libsfp_teegw",
     owner: "samsung",
+    allow_undefined_symbols: true,
     strip: {
         none: true,
     },
@@ -20892,6 +21196,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libQSEEComAPI",
                 "libdmabufheap",
+                "libion",
                 "libbase",
                 "liblog",
                 "libutils",
@@ -26405,6 +26710,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.soter-V2-ndk",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.samsung.hardware.soter-V2-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.samsung.hardware.thermal-V1-ndk",
     owner: "samsung",
     strip: {
@@ -26512,6 +26842,28 @@ prebuilt_apex {
 }
 
 android_app_import {
+    name: "SecSoterService",
+    owner: "samsung",
+    apk: "proprietary/system/priv-app/SecSoterService/SecSoterService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+}
+
+android_app_import {
+    name: "SoterSskdsSerivce",
+    owner: "samsung",
+    apk: "proprietary/system/priv-app/SoterSskdsSerivce/SoterSskdsSerivce.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+}
+
+android_app_import {
     name: "TimeService",
     owner: "samsung",
     apk: "proprietary/vendor/app/TimeService/TimeService.apk",
@@ -26571,6 +26923,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "drk_manifest.xml",
+    owner: "samsung",
+    src: "proprietary/vendor/etc/vintf/manifest/drk_manifest.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "qms-saidl.xml",
     owner: "samsung",
     src: "proprietary/vendor/etc/vintf/manifest/qms-saidl.xml",
@@ -26592,6 +26953,15 @@ prebuilt_etc_xml {
     name: "secaudiohalaidl_manifest.xml",
     owner: "samsung",
     src: "proprietary/vendor/etc/vintf/manifest/secaudiohalaidl_manifest.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "soter_device-manifest.xml",
+    owner: "samsung",
+    src: "proprietary/vendor/etc/vintf/manifest/soter_device-manifest.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -27687,6 +28057,38 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "vendor.samsung.hardware.security.drk-service",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.samsung.hardware.security.drk-service",
+            ],
+            shared_libs: [
+                "libbase",
+                "libc",
+                "libbinder_ndk",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "vendor.samsung.hardware.security.drk-V1-ndk",
+                "libdk_vnd_service_core",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "vendor.samsung.hardware.security.widevine.keyprov-service",
     owner: "samsung",
     target: {
@@ -27702,6 +28104,38 @@ cc_prebuilt_binary {
                 "libbinder_ndk",
                 "libbinder",
                 "vendor.samsung.hardware.security.widevine.keyprov-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.samsung.hardware.soter-service",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.samsung.hardware.soter-service",
+            ],
+            shared_libs: [
+                "libAidlSoterServiceImpl",
+                "libTigerLogger",
+                "libbase",
+                "liblog",
+                "libutils",
+                "libbinder_ndk",
+                "vendor.samsung.hardware.soter-V2-ndk",
                 "libc++",
                 "libc",
                 "libm",

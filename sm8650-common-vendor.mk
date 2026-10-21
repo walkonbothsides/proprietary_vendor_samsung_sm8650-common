@@ -8,6 +8,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
     vendor/samsung/sm8650-common/proprietary/product/etc/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml \
+    vendor/samsung/sm8650-common/proprietary/system/etc/security/sskds.crt:$(TARGET_COPY_OUT_SYSTEM)/etc/security/sskds.crt \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/DsgpPolicy.csv:$(TARGET_COPY_OUT_VENDOR)/etc/DsgpPolicy.csv \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/aip/config/PCC_Config-timestamp:$(TARGET_COPY_OUT_VENDOR)/etc/aip/config/PCC_Config-timestamp \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/aip/config/pcc_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/aip/config/pcc_config.json \
@@ -82,6 +83,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/samsung.software.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.software.media.c2@1.0-service.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/secaudiohalaidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/secaudiohalaidl.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/shsusrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/shsusrd.rc \
+    vendor/samsung/sm8650-common/proprietary/vendor/etc/init/soter-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/soter-default.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/tlpd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tlpd.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/trusteduilistener.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trusteduilistener.rc \
@@ -101,6 +103,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.ifaa-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.ifaa-service.rc \
+    vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.security.drk-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.drk-service.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.thermal-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.thermal-default.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.rilchip.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rilchip.qcom.rc \
@@ -237,6 +240,13 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/lib64/p3_profile.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/p3_profile.bin
 
 PRODUCT_PACKAGES += \
+    lib_nativeJni.dk.samsung \
+    lib_vnd_client.dk.samsung \
+    libcrypto_soter \
+    libdk_native_keymint_soter_system \
+    vendor.samsung.hardware.keymint-V3-ndk_soter_system \
+    vendor.samsung.hardware.security.drk-V1-ndk_soter_system \
+    vendor.samsung.hardware.security.drk@2.0_soter_system \
     vendor.samsung.hardware.security.widevine.keyprov-V2-ndk \
     SWPD_libTsAf \
     btaudio_offload_if \
@@ -419,6 +429,7 @@ PRODUCT_PACKAGES += \
     libAImode_wrapper.camera.samsung \
     libAIphoto_core.camera.samsung \
     libAfHelper.uniplugin@1.0 \
+    libAidlSoterServiceImpl \
     libAlacSwDec \
     libApeSwDec \
     libBarcodeReader.vendor.quram \
@@ -498,6 +509,8 @@ PRODUCT_PACKAGES += \
     libTetraMFP10Tuning.camera.samsung \
     libTetraSR10.camera.samsung \
     libTetraSR10Tuning.camera.samsung \
+    libTigerCaV4 \
+    libTigerLogger \
     libTouchInputVM \
     libTrustedInput \
     libTrustedInputAIDL \
@@ -608,6 +621,7 @@ PRODUCT_PACKAGES += \
     libdisplaydebug \
     libdisplayqos \
     libdisplayskuutils \
+    libdk_vnd_service_core \
     libdpps \
     libdrmfs \
     libdrmtime \
@@ -1058,21 +1072,26 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.security.drk@2.0 \
     vendor.samsung.hardware.security.hermes-V1-ndk \
     vendor.samsung.hardware.security.widevine.keyprov-V1-ndk \
+    vendor.samsung.hardware.soter-V2-ndk \
     vendor.samsung.hardware.thermal-V1-ndk \
     vendor_lib_rfsa_adsp_libdsp_streamer_binning_so \
     vendor_lib_rfsa_adsp_libhme_dsp_skel_so \
     libmmosal \
     libmmparser_lite \
     com.google.android.widevine.nonupdatable \
+    SecSoterService \
+    SoterSskdsSerivce \
     TimeService \
     EuiccGoogle \
     uimservicelibrary \
     android.hardware.gnss-aidl-service-qti.xml \
     atfwd-saidl.xml \
     bttpi-saidl.xml \
+    drk_manifest.xml \
     qms-saidl.xml \
     sec_c2_manifest_default0_1_2.xml \
     secaudiohalaidl_manifest.xml \
+    soter_device-manifest.xml \
     vendor.qti.camera.aon-impl.xml \
     vendor.qti.camera.offlinecamera-impl.xml \
     vendor.qti.camera.postproc-impl.xml \
@@ -1115,7 +1134,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.media.c2@1.0-service \
     vendor.samsung.hardware.camera.provider-service_64 \
     vendor.samsung.hardware.ifaa-service \
+    vendor.samsung.hardware.security.drk-service \
     vendor.samsung.hardware.security.widevine.keyprov-service \
+    vendor.samsung.hardware.soter-service \
     vendor.samsung.hardware.thermal-service \
     init.kernel.post_boot-pineapple \
     init.kernel.post_boot \

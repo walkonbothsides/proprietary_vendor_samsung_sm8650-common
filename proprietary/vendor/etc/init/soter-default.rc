@@ -1,0 +1,4 @@
+service vendor.soter-aidl-service /vendor/bin/hw/vendor.samsung.hardware.soter-service
+    class hal
+    user system
+    group system input 
