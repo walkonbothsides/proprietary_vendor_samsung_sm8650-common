@@ -34,12 +34,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/aip/model/mfisp_model_nl_Tetra_RGB_fp16.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/aip/model/mfisp_model_nl_Tetra_RGB_fp16.dlc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/aip/model/mfisp_tmodel_ll_Tetra_RGB_fp16.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/aip/model/mfisp_tmodel_ll_Tetra_RGB_fp16.dlc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/aip/model/mfisp_tmodel_nl_Tetra_RGB_fp16.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/aip/model/mfisp_tmodel_nl_Tetra_RGB_fp16.dlc \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_effects_haptic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_haptic.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_effects_sec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_sec.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_effects_spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_spatializer.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/audio_policy_configuration_base.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_base.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/batching.conf:$(TARGET_COPY_OUT_VENDOR)/etc/batching.conf \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/beauty/settings.dat:$(TARGET_COPY_OUT_VENDOR)/etc/beauty/settings.dat \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/btcon.json:$(TARGET_COPY_OUT_VENDOR)/etc/btcon.json \
@@ -59,6 +53,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/floating_feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/floating_feature.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/gnss_antenna_info.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss_antenna_info.conf \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
+    vendor/samsung/sm8650-common/proprietary/vendor/etc/hdr_samsung_mx.key:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_samsung_mx.key \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/hqm_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hqm_device.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-qti.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/android.hardware.gatekeeper-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service.rc \
@@ -108,7 +103,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.hardware.thermal-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.thermal-default.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.rilchip.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rilchip.qcom.rc \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.samsung.rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rild.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/wifi_qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_qcom.rc \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/init/wifi_sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_sec.rc \
@@ -130,7 +124,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/media_profiles_pineapple.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_pineapple.xml \
-    vendor/samsung/sm8650-common/proprietary/vendor/etc/mem_logger_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mem_logger_config.xml \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/mercury.json:$(TARGET_COPY_OUT_VENDOR)/etc/mercury.json \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/mercury_hv.json:$(TARGET_COPY_OUT_VENDOR)/etc/mercury_hv.json \
     vendor/samsung/sm8650-common/proprietary/vendor/etc/models/acd/environment.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/environment.eai \
@@ -399,7 +392,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.bluetooth@1.1-impl-qti \
     android.hardware.gnss-aidl-impl-qti \
-    audio.primary.pineapple \
     camera.qcom.sm8650 \
     camera.qcom \
     camera.unihal.default \
@@ -533,21 +525,11 @@ PRODUCT_PACKAGES += \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
-    libagm \
-    libagm_compress_plugin \
-    libagm_mixer_plugin \
-    libagm_pcm_plugin \
-    libagmclient \
-    libagmmixer \
     libai_denoiser_interface \
     libaidenoiser \
     libaidenoiserv2 \
     libaifrc.quram \
     libaivideocentral.arcsoft \
-    libar-acdb \
-    libar-gpr \
-    libar-gsl \
-    libar-pal \
     libarcsoft_aieffectpk_detection \
     libarcsoft_aieffectpk_dualcam_video_bokeh \
     libarcsoft_aieffectpk_video \
@@ -559,11 +541,8 @@ PRODUCT_PACKAGES += \
     libarcsoft_deflicker_native \
     libarcsoft_dualcam_portraitlighting_preview \
     libarcsoft_object_tracking \
-    libarmemlog \
     libatccore \
-    libats \
     libaudio_log_utils \
-    libaudiochargerlistener \
     libaudiofeaturestats \
     libauto_framing_arcsoft.uniplugin@1.0 \
     libauto_framing_lite.uniplugin@1.0 \
@@ -663,6 +642,7 @@ PRODUCT_PACKAGES += \
     libhandgesture.arcsoft \
     libhdr10plus \
     libhdr_backlight_adapter \
+    libhdr_backlight_adapter_qti \
     libhdr_stub \
     libhdr_tm \
     libhdradaptivecustom \
@@ -724,8 +704,6 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblowi_common \
     liblowi_wifihal \
-    liblx-ar_util \
-    liblx-osal \
     libmaskdetection.uniplugin@1.0 \
     libmcaimegpu.samsung \
     libmctfengine_stub \
@@ -832,7 +810,6 @@ PRODUCT_PACKAGES += \
     librechdr10plus.sec \
     librechdr10plus \
     librecordalive \
-    libril_sem \
     librmengine_plus.uniplugin@1.0 \
     librpmb \
     libsamsungcamerahal \
@@ -899,7 +876,6 @@ PRODUCT_PACKAGES += \
     libsnapdragoncolor-qdcm \
     libsnaplite_native \
     libsnaplite_wrapper \
-    libsndcardparser \
     libsnpe_dsp_domains_v3 \
     libsnpe_wrapper \
     libsns_api \
@@ -962,7 +938,6 @@ PRODUCT_PACKAGES += \
     libvideotxr \
     libvkmanager_vendor \
     libvmfilexfer \
-    libvmmem \
     libvui_dmgr \
     libvui_dmgr_client \
     libwifiobserver \
@@ -1019,7 +994,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.diaghal@1.0_vendor \
     vendor.qti.gnss-V5-ndk \
     vendor.qti.gnss-service \
-    vendor.qti.hardware.AGMIPC@1.0-impl \
     vendor.qti.hardware.ListenSoundModel@1.0-impl \
     vendor.qti.hardware.ListenSoundModel@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
@@ -1030,7 +1004,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.fm@1.0 \
-    vendor.qti.hardware.pal@1.0-impl \
     vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.qccsyshal@1.1 \
     vendor.qti.hardware.qccsyshal@1.2 \
@@ -1066,11 +1039,7 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.keymint-V3-ndk \
     vendor.samsung.hardware.media.mpp-V5-ndk \
     vendor.samsung.hardware.radio-V1-ndk \
-    vendor.samsung.hardware.radio.bridge-V1-ndk \
     vendor.samsung.hardware.radio.channel-V1-ndk \
-    vendor.samsung.hardware.radio.data-V1-ndk \
-    vendor.samsung.hardware.radio.messaging-V1-ndk \
-    vendor.samsung.hardware.radio.sim-V1-ndk \
     vendor.samsung.hardware.security.drk-V1-ndk \
     vendor.samsung.hardware.security.drk@2.0 \
     vendor.samsung.hardware.security.hermes-V1-ndk \
@@ -1097,13 +1066,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.trustedui-aidl-service.xml \
     vendor.qti.qccvndhal_aidl-service.xml \
     vendor.samsung.hardware.camera.provider-service.xml \
-    vendor.samsung.hardware.radio_manifest_2_34.xml \
-    vendor.samsung.hardware.sehradio_manifest_2_34.xml \
     vendor.samsung.hardware.thermal-default.xml \
     ATFWD-daemon \
     adpl \
     adsprpcd \
-    audioadsprpcd \
     cdsprpcd \
     cnss-daemon \
     diag-router \
@@ -1116,7 +1082,6 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-service-qti \
     android.hardware.security.keymint-service-spu-qti \
     macloader \
-    rild \
     samsung.software.media.c2@1.0-service \
     secaudiohalaidl \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
